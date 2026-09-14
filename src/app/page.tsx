@@ -46,7 +46,7 @@ export default function EducationalInstituteSecurityPage() {
       <section className={styles.hero} id="hero">
         <div className={styles.heroBg}>
           <Image
-            src="/educational_institute_hero.png"
+            src="https://cms.secureguardservices.com/wp-content/uploads/2026/09/ed1.png"
             alt="Secure Guard officer standing in front of a modern school campus during twilight"
             fill
             className={styles.heroBgImg}
@@ -138,7 +138,7 @@ export default function EducationalInstituteSecurityPage() {
           <div className={styles.addonGrid}>
             <div className={styles.addonImageCol}>
               <Image 
-                src="/educational_institute_patrol.png" 
+                src="https://cms.secureguardservices.com/wp-content/uploads/2026/09/ed2.png" 
                 alt="Secure Guard officer conducting foot patrol on a modern school campus" 
                 width={600} 
                 height={500} 
