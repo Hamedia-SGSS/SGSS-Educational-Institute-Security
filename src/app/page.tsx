@@ -6,16 +6,16 @@ import { PreFooterCTA } from "@/components/PreFooterCTA";
 
 // Reusable icons for situations and fits
 const situations = [
-  { icon: "📋", title: "Visitor Check-in", desc: "Greeting and verifying credentials of parents, contractors, and guests at school entrances." },
-  { icon: "🤝", title: "Student Disputes", desc: "De-escalating conflicts and monitoring high-activity areas like cafeterias or hallways." },
-  { icon: "🚗", title: "Parking Lot Monitoring", desc: "Preventing vandalism, monitoring student drivers, and enforcing campus speed limits." },
-  { icon: "🚶", title: "After-Hours Trespassing", desc: "Securing campus boundaries and vacant athletic fields against loiterers and vandals." },
-  { icon: "🎨", title: "Vandalism", desc: "Preventing property damage, graffiti, and broken glass on administrative and classroom buildings." },
-  { icon: "🎫", title: "Event Security", desc: "Managing crowds, monitoring admission gates, and directing traffic during athletic events or graduations." },
-  { icon: "🏫", title: "Campus Patrol", desc: "Conducting foot or mobile checks of administrative buildings, dorms, and athletic complexes." },
-  { icon: "🚨", title: "Emergency Response Support", desc: "Assisting staff during drills and providing real-time local coordination for emergency services." },
-  { icon: "🔑", title: "Unauthorized Access", desc: "Politely intercepting individuals who bypass access control points and escorting them off-site." },
-  { icon: "👥", title: "Staff Escort Requests", desc: "Accompanying teachers and administrative staff to their vehicles safely during evening or late hours." },
+  { icon: "📋", title: "Visitor Check-in", desc: "Greeting and verifying credentials of parents, contractors, and guests at school entrances per campus visitor procedures." },
+  { icon: "🤝", title: "Student Disputes", desc: "Using verbal de-escalation and notifying school administrators in authorized common areas." },
+  { icon: "🚗", title: "Parking Lot Monitoring", desc: "Observe arrival and departure areas, deter vandalism, and report unsafe driving to authorized school staff (traffic enforcement remains with school administration or law enforcement)." },
+  { icon: "🚶", title: "After-Hours Trespassing", desc: "Patrolling campus boundaries and vacant athletic fields to deter loitering and report trespassing." },
+  { icon: "🎨", title: "Vandalism", desc: "Deterring property damage, graffiti, and vandalism on administrative and classroom buildings through visible patrols." },
+  { icon: "🎫", title: "Event Security", desc: "Managing queues, monitoring admission gates, and supporting parking flow during athletic events or graduations." },
+  { icon: "🏫", title: "Campus Patrol", desc: "Conducting foot or mobile checks of administrative buildings, dorms, and athletic complexes as defined in campus post orders." },
+  { icon: "🚨", title: "Emergency Response Support", desc: "Follow the school emergency operations plan under administrator direction, supporting lockdown and lockout procedures as assigned." },
+  { icon: "🔑", title: "Unauthorized Access", desc: "Report access violations and coordinate with authorized school administrators and law enforcement when appropriate." },
+  { icon: "👥", title: "Staff Escort Requests", desc: "Accompanying teachers and administrative staff to their vehicles during evening or late hours when included in post orders." },
 ];
 
 const properties = [
@@ -30,10 +30,10 @@ const properties = [
 ];
 
 const coverageOptions = [
-  { service: "School Hours & Daily Operations", schedule: "Mon - Fri Day", desc: "Monitoring front gate check-ins, hallway safety, and assisting staff during the active school day." },
-  { service: "After-Hours & Event Security", schedule: "Evenings / Custom", desc: "Crowd control and parking coordination for athletic events, parent nights, and school board meetings." },
-  { service: "Nights & Weekends Patrols", schedule: "24/7 Focus", desc: "Dedicated foot patrols and security checks when classrooms, labs, and dorms are empty." },
-  { service: "Emergency Response Support", schedule: "On-Call / Flexible", desc: "Assisting school administrators with drills, lockouts, and emergency contact coordination." },
+  { service: "School Hours & Daily Operations", schedule: "Sample: Mon - Fri Day", desc: "Monitoring front gate check-ins and patrolling authorized campus common areas and entrances under school policies and administrative supervision." },
+  { service: "After-Hours & Event Security", schedule: "Evenings / Custom", desc: "Crowd management and parking support for athletic events, parent nights, and school board meetings." },
+  { service: "Nights & Weekends Patrols", schedule: "Sample / Custom Schedule", desc: "Scheduled foot or mobile patrols when classrooms, labs, and dorms are closed (coverage hours and patrol frequency are tailored to the school agreement)." },
+  { service: "Emergency Response Support", schedule: "By Agreement / Assigned", desc: "Follow the school emergency operations plan under administrator direction, supporting lockdown and lockout procedures as assigned." },
 ];
 
 export default function EducationalInstituteSecurityPage() {
@@ -65,7 +65,7 @@ export default function EducationalInstituteSecurityPage() {
               Support Safer Campuses, Students, Staff, Visitors, <span className={styles.heroTitleAccent}>and Daily School Operations</span>
             </h1>
             <p className={styles.heroSubtitle}>
-              Secure Guard Security Services delivers responsive, de-escalation-focused protection for schools, universities, and training centers. Ensure a welcoming and secure learning environment.
+              Secure Guard Security Services delivers responsive, de-escalation-focused security for schools, universities, and training centers. Support a welcoming learning environment through visible patrols, visitor procedures, and incident reporting.
             </p>
             <div className={styles.heroCtas}>
               <a 
@@ -104,18 +104,18 @@ export default function EducationalInstituteSecurityPage() {
           <div className={styles.whyGrid}>
             <div className={styles.whyText}>
               <p className={styles.bodyText}>
-                Educational institutions must protect students, staff, visitors, buildings, parking areas, events, and campus property while maintaining a welcoming environment.
+                Educational institutions must support the safety of students, staff, visitors, buildings, parking areas, events, and campus property while maintaining a welcoming environment.
               </p>
               <p className={styles.bodyText}>
-                Security concerns may include unauthorized visitors, student conflicts, parking issues, vandalism, after-hours activity, emergency response, and access control. Clients need trained personnel who can be visible, professional, and calm around students and families.
+                Security concerns may include unauthorized visitors, student conflicts, parking issues, vandalism, after-hours activity, emergency procedures, and access control. Clients need trained personnel who can be visible, professional, and calm around students and families.
               </p>
             </div>
             <div className={styles.whyCards}>
               {[
-                { icon: "🔑", title: "Unauthorized Access", desc: "Preventing unverified individuals from bypassing entrance protocols and entering classrooms." },
-                { icon: "🤝", title: "Student Disputes", desc: "De-escalating conflicts between students or visitors calmly without disrupting the academic day." },
-                { icon: "🎨", title: "Vandalism & Damage", desc: "Deterring graffiti, property damage, and destruction of facilities during low-traffic periods." },
-                { icon: "🚗", title: "Parking Lot Issues", desc: "Monitoring school parking areas, supervising student drivers, and ensuring safe pick-up/drop-off." },
+                { icon: "🔑", title: "Unauthorized Access", desc: "Report access violations and coordinate with authorized school administrators and law enforcement when appropriate." },
+                { icon: "🤝", title: "Student Disputes", desc: "De-escalating conflicts calmly and notifying school staff without disrupting the academic day." },
+                { icon: "🎨", title: "Vandalism & Damage", desc: "Deterring graffiti, property damage, and vandalism of facilities during low-traffic periods." },
+                { icon: "🚗", title: "Parking Lot Issues", desc: "Observe arrival and departure areas and report unsafe driving to authorized school staff (traffic enforcement remains with school administration or law enforcement)." },
               ].map((c) => (
                 <div key={c.title} className={styles.whyCard}>
                   <div className={styles.whyCardIconWrapper}>
@@ -155,7 +155,7 @@ export default function EducationalInstituteSecurityPage() {
                 Secure Guard provides educational security officers for campus patrol, visitor check-in support, parking lot monitoring, event security, access control, incident reporting, and after-hours building checks.
               </p>
               <p className={styles.bodyText}>
-                Our team is specifically trained to support daily operations, special events, school entrances, administrative buildings, and high-traffic areas. We focus on customer service and de-escalation to ensure a secure yet friendly atmosphere.
+                Officers patrol authorized campus common areas and entrances under school policies and administrative supervision. Assigned officers complete required vetting, age-appropriate conduct orientation, and campus-specific post orders per the school&apos;s agreement.
               </p>
             </div>
           </div>
@@ -172,7 +172,7 @@ export default function EducationalInstituteSecurityPage() {
             </h2>
           </div>
           <p className={styles.bodyTextCenteredLight}>
-            Coverage can be scheduled during school hours, nights, weekends, and holidays. We align our security presence with school calendars and campus events.
+            Sample schedules are shown below. Coverage hours, patrol frequency, and staffing levels are tailored to your school&apos;s service agreement and academic calendar.
           </p>
 
           {/* Coverage Options Table */}
@@ -211,7 +211,7 @@ export default function EducationalInstituteSecurityPage() {
                 What This Means <span className={styles.titleAccentGold}>for the Client</span>
               </h2>
               <p className={styles.bodyTextLight}>
-                By deploying Secure Guard, you establish a reliable security presence that supports student and parent concerns, reduces property damage, and ensures a safer environment.
+                By deploying Secure Guard, you establish a reliable security presence that supports administrators with student and parent concerns, helps deter property damage, and supports a welcoming campus environment.
               </p>
             </div>
             <div className={styles.opsFeatures}>
@@ -266,7 +266,7 @@ export default function EducationalInstituteSecurityPage() {
               Academic Environments We <span className={styles.titleAccentGold}>Secure & Support</span>
             </h2>
             <p className={styles.sectionSubtextLight}>
-              Our specialized security officers are trained for all levels of education, from private academies to university complexes.
+              Assigned officers complete required vetting, age-appropriate conduct orientation, and campus-specific post orders per the school&apos;s agreement.
             </p>
           </div>
           <div className={styles.propertiesGrid}>
