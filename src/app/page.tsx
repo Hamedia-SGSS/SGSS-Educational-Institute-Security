@@ -3,30 +3,31 @@ import styles from "./page.module.css";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { PreFooterCTA } from "@/components/PreFooterCTA";
+import { ShieldIcon, type ShieldIconName } from "@/components/ShieldIcon";
 
 // Reusable icons for situations and fits
-const situations = [
-  { icon: "📋", title: "Visitor Check-in", desc: "Greeting and verifying credentials of parents, contractors, and guests at school entrances per campus visitor procedures." },
-  { icon: "🤝", title: "Student Disputes", desc: "Using verbal de-escalation and notifying school administrators in authorized common areas." },
-  { icon: "🚗", title: "Parking Lot Monitoring", desc: "Observe arrival and departure areas, deter vandalism, and report unsafe driving to authorized school staff (traffic enforcement remains with school administration or law enforcement)." },
-  { icon: "🚶", title: "After-Hours Trespassing", desc: "Patrolling campus boundaries and vacant athletic fields to deter loitering and report trespassing." },
-  { icon: "🎨", title: "Vandalism", desc: "Deterring property damage, graffiti, and vandalism on administrative and classroom buildings through visible patrols." },
-  { icon: "🎫", title: "Event Security", desc: "Managing queues, monitoring admission gates, and supporting parking flow during athletic events or graduations." },
-  { icon: "🏫", title: "Campus Patrol", desc: "Conducting foot or mobile checks of administrative buildings, dorms, and athletic complexes as defined in campus post orders." },
-  { icon: "🚨", title: "Emergency Response Support", desc: "Follow the school emergency operations plan under administrator direction, supporting lockdown and lockout procedures as assigned." },
-  { icon: "🔑", title: "Unauthorized Access", desc: "Report access violations and coordinate with authorized school administrators and law enforcement when appropriate." },
-  { icon: "👥", title: "Staff Escort Requests", desc: "Accompanying teachers and administrative staff to their vehicles during evening or late hours when included in post orders." },
+const situations: { icon: ShieldIconName; title: string; desc: string }[] = [
+  { icon: "id-card", title: "Visitor Check-in", desc: "Greeting and verifying credentials of parents, contractors, and guests at school entrances per campus visitor procedures." },
+  { icon: "dispute", title: "Student Disputes", desc: "Using verbal de-escalation and notifying school administrators in authorized common areas." },
+  { icon: "car", title: "Parking Lot Monitoring", desc: "Observe arrival and departure areas, deter vandalism, and report unsafe driving to authorized school staff (traffic enforcement remains with school administration or law enforcement)." },
+  { icon: "trespass", title: "After-Hours Trespassing", desc: "Patrolling campus boundaries and vacant athletic fields to deter loitering and report trespassing." },
+  { icon: "wrench", title: "Vandalism", desc: "Deterring property damage, graffiti, and vandalism on administrative and classroom buildings through visible patrols." },
+  { icon: "ticket", title: "Event Security", desc: "Managing queues, monitoring admission gates, and supporting parking flow during athletic events or graduations." },
+  { icon: "campus", title: "Campus Patrol", desc: "Conducting foot or mobile checks of administrative buildings, dorms, and athletic complexes as defined in campus post orders." },
+  { icon: "alert", title: "Emergency Response Support", desc: "Follow the school emergency operations plan under administrator direction, supporting lockdown and lockout procedures as assigned." },
+  { icon: "id-card", title: "Unauthorized Access", desc: "Report access violations and coordinate with authorized school administrators and law enforcement when appropriate." },
+  { icon: "escort", title: "Staff Escort Requests", desc: "Accompanying teachers and administrative staff to their vehicles during evening or late hours when included in post orders." },
 ];
 
-const properties = [
-  { icon: "🏫", label: "Private Schools" },
-  { icon: "🎒", label: "Charter Schools" },
-  { icon: "🎓", label: "Colleges & Universities" },
-  { icon: "📚", label: "Training Centers" },
-  { icon: "🏢", label: "Administrative Offices" },
-  { icon: "🏠", label: "Campus Housing" },
-  { icon: "🏟️", label: "School Events" },
-  { icon: "🏛️", label: "Educational Facilities" },
+const properties: { icon: ShieldIconName; label: string }[] = [
+  { icon: "school", label: "Private Schools" },
+  { icon: "backpack", label: "Charter Schools" },
+  { icon: "graduation", label: "Colleges & Universities" },
+  { icon: "book", label: "Training Centers" },
+  { icon: "office", label: "Administrative Offices" },
+  { icon: "housing", label: "Campus Housing" },
+  { icon: "stadium", label: "School Events" },
+  { icon: "institute", label: "Educational Facilities" },
 ];
 
 const coverageOptions = [
@@ -95,14 +96,12 @@ export default function EducationalInstituteSecurityPage() {
       {/* ===== SECTION 2: REAL-LIFE PROBLEM ===== */}
       <section className={styles.whySection} id="problem">
         <div className="container">
-          <div className={styles.sectionHeader}>
-            <span className={styles.sectionTag}>Real-Life Problem</span>
-            <h2 className={styles.sectionTitle}>
-              Maintaining Safety in an <span className={styles.titleAccent}>Academic Environment</span>
-            </h2>
-          </div>
           <div className={styles.whyGrid}>
             <div className={styles.whyText}>
+              <span className={styles.sectionTag}>Real-Life Problem</span>
+              <h2 className={styles.sectionTitle}>
+                Maintaining Safety in an <span className={styles.titleAccent}>Academic Environment</span>
+              </h2>
               <p className={styles.bodyText}>
                 Educational institutions must support the safety of students, staff, visitors, buildings, parking areas, events, and campus property while maintaining a welcoming environment.
               </p>
@@ -111,15 +110,17 @@ export default function EducationalInstituteSecurityPage() {
               </p>
             </div>
             <div className={styles.whyCards}>
-              {[
-                { icon: "🔑", title: "Unauthorized Access", desc: "Report access violations and coordinate with authorized school administrators and law enforcement when appropriate." },
-                { icon: "🤝", title: "Student Disputes", desc: "De-escalating conflicts calmly and notifying school staff without disrupting the academic day." },
-                { icon: "🎨", title: "Vandalism & Damage", desc: "Deterring graffiti, property damage, and vandalism of facilities during low-traffic periods." },
-                { icon: "🚗", title: "Parking Lot Issues", desc: "Observe arrival and departure areas and report unsafe driving to authorized school staff (traffic enforcement remains with school administration or law enforcement)." },
-              ].map((c) => (
+              {(
+                [
+                  { icon: "id-card", title: "Unauthorized Access", desc: "Report access violations and coordinate with authorized school administrators and law enforcement when appropriate." },
+                  { icon: "dispute", title: "Student Disputes", desc: "De-escalating conflicts calmly and notifying school staff without disrupting the academic day." },
+                  { icon: "wrench", title: "Vandalism & Damage", desc: "Deterring graffiti, property damage, and vandalism of facilities during low-traffic periods." },
+                  { icon: "car", title: "Parking Lot Issues", desc: "Observe arrival and departure areas and report unsafe driving to authorized school staff (traffic enforcement remains with school administration or law enforcement)." },
+                ] as { icon: ShieldIconName; title: string; desc: string }[]
+              ).map((c) => (
                 <div key={c.title} className={styles.whyCard}>
                   <div className={styles.whyCardIconWrapper}>
-                    <span className={styles.whyCardIcon}>{c.icon}</span>
+                    <ShieldIcon name={c.icon} size={34} />
                   </div>
                   <div className={styles.whyCardContent}>
                     <h3 className={styles.whyCardTitle}>{c.title}</h3>
@@ -225,7 +226,9 @@ export default function EducationalInstituteSecurityPage() {
                 "Flexible coverage for school hours, nights, and weekends",
               ].map((benefit, idx) => (
                 <div key={idx} className={styles.opsFeatureItem}>
-                  <span className={styles.opsFeatureIcon}>🛡️</span>
+                  <span className={styles.opsFeatureIcon}>
+                    <ShieldIcon name="check" size={26} />
+                  </span>
                   <span className={styles.opsFeatureLabel}>{benefit}</span>
                 </div>
               ))}
@@ -247,7 +250,9 @@ export default function EducationalInstituteSecurityPage() {
             {situations.map((sit, index) => (
               <div key={index} className={styles.situationCard}>
                 <div className={styles.situationHeader}>
-                  <span className={styles.situationIcon}>{sit.icon}</span>
+                  <span className={styles.situationIcon}>
+                    <ShieldIcon name={sit.icon} size={34} />
+                  </span>
                   <h3 className={styles.situationTitle}>{sit.title}</h3>
                 </div>
                 <p className={styles.situationDesc}>{sit.desc}</p>
@@ -272,7 +277,9 @@ export default function EducationalInstituteSecurityPage() {
           <div className={styles.propertiesGrid}>
             {properties.map((prop, idx) => (
               <div key={idx} className={styles.propertyCard}>
-                <div className={styles.propertyIcon}>{prop.icon}</div>
+                <div className={styles.propertyIcon}>
+                  <ShieldIcon name={prop.icon} size={40} />
+                </div>
                 <span className={styles.propertyLabel}>{prop.label}</span>
               </div>
             ))}
